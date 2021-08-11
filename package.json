@@ -14,8 +14,9 @@
     "build-storybook": "build-storybook"
   },
   "lint-staged": {
-    "src/**/*": [
+    "src/**/*.{ts,tsx}": [
       "yarn lint --fix",
+      "prettier --write",
       "yarn test --findRelatedTests --bail"
     ]
   },
