@@ -1,17 +1,18 @@
 import React from 'react'
 import * as S from './styles'
 
-const Main = () => {
+const Main = ({
+  title = 'react avançado',
+  description = 'Typescript, ReactJs, Nextjs e Styled Components'
+}) => {
   return (
     <S.Wrapper>
       <S.Logo
         src="logo.svg"
         alt="Imagem de um átomo e React Avançado ao lado."
       ></S.Logo>
-      <S.Title>react avançado a</S.Title>
-      <S.Description>
-        Typescript, ReactJs, Nextjs e Styled Components
-      </S.Description>
+      <S.Title>{title}</S.Title>
+      <S.Description>{description}</S.Description>
       <S.Illustration
         src="hero-illustration.svg"
         alt="um desenvolvedor de frente para a tela com codigo"
